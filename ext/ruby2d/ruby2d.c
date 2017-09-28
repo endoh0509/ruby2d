@@ -1,7 +1,11 @@
 // ruby2d.c – Native C extension for Ruby and MRuby
 
 // Simple 2D includes
-#include <simple2d.h>
+#if RUBY2D_IOS_TVOS
+  #include <Simple2D/simple2d.h>
+#else
+  #include <simple2d.h>
+#endif
 
 // Ruby includes
 #if MRUBY
